@@ -1,0 +1,33 @@
+{
+    "name": "torunar/ascii-chan",
+    "type": "project",
+    "require": {
+        "nikic/fast-route": "2.0.x-dev",
+        "ext-mbstring": "*",
+        "ext-sqlite3": "*"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Torunar\\AsciiChan\\": "src/",
+            "Tests\\AsciiChan\\": "tests/"
+        },
+        "files": [
+            "src/board.php",
+            "src/navigation.php",
+            "src/render.php",
+            "src/service.php",
+            "src/text.php",
+            "src/manage.php"
+        ]
+    },
+    "scripts": {
+        "serve": [
+            "php -S 0.0.0.0:8080 -t public"
+        ],
+        "manage": [
+            "php -a -d auto_prepend_file=vendor/autoload.php"
+        ]
+    },
+    "minimum-stability": "dev"
+}
