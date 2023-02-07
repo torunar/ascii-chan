@@ -1,0 +1,282 @@
+:root {
+    --bg: #0000AA;
+    --fg: #FFFFFF;
+    --decorationFg: #AAAAAA;
+    --interactiveBg: transparent;
+    --interactiveFg: #FFFF55;
+    --actionableBg: #FFFFFF;
+    --actionableFg: #0000AA;
+    --activeBg: #FFFF55;
+    --activeFg: #0000AA;
+    --selectionBg: #00AA00;
+    --selectionFg: #FFFFFF;
+    --fontSize: calc(min(2vw, 18px));
+}
+
+@font-face {
+    font-family: "WebPlus IBM EGA 8x14";
+    src: local("WebPlus IBM EGA 8x14"), url("/static/webplus-ibm-ega-8x14.woff") format("woff");
+    font-display: swap
+}
+
+* {
+    font-family: "WebPlus IBM EGA 8x14", monospace;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    line-height: var(--fontSize);
+    font-size: var(--fontSize);
+    font-weight: normal;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    background: var(--bg);
+    color: var(--fg);
+}
+
+::selection {
+    background: var(--selectionBg);
+    color: var(--selectionFg);
+}
+
+a {
+    color: var(--interactiveFg);
+    background: var(--interactiveBg);
+    text-decoration: none;
+}
+
+button {
+    background: var(--actionableBg);
+    color: var(--actionableFg);
+}
+
+a:hover, a:active, a:focus,
+button:hover, button:active, button:focus {
+    background: var(--activeBg);
+    color: var(--activeFg);
+}
+
+.body-wrapper:before,
+.body-wrapper:after{
+    display: block;
+    content: ' ';
+    white-space: pre;
+}
+
+.body-wrapper {
+    width: 80ch;
+    margin: 0 auto;
+}
+
+.title-wrapper:before {
+    display: block;
+    content: '╔══════════════════════════════════════════════════════════════════════════════╗';
+    position: absolute;
+    z-index: 1;
+    color: var(--decorationFg);
+}
+
+.title-wrapper:after {
+    display: block;
+    content: '║                                                                              ║';
+    white-space: pre;
+    color: var(--decorationFg);
+}
+
+.title {
+    display: inline;
+    background: var(--bg);
+    margin-left: 2ch;
+    position: relative;
+    z-index: 2;
+}
+
+.title:before {
+    content: '╣';
+    color: var(--decorationFg);
+}
+
+.title:after {
+    content: '╠';
+    color: var(--decorationFg);
+}
+
+.line-wrapper:before {
+    display: block;
+    content: '║                                                                              ║';
+    white-space: pre;
+    position: absolute;
+    z-index: 1;
+    color: var(--decorationFg);
+}
+
+.line-wrapper {
+    position: relative;
+}
+
+.board {
+    position: relative;
+    z-index: 2;
+    margin-left: 2ch;
+}
+
+.post__nav {
+    margin-left: 2ch;
+    position: relative;
+    z-index: 2;
+    color: var(--decorationFg);
+}
+
+.post__date:after {
+    display: inline-block;
+    content: '│';
+    color: var(--decorationFg);
+}
+
+.thread-post:after {
+    display: block;
+    content: '║                                                                              ║';
+    white-space: pre;
+    color: var(--decorationFg);
+}
+
+.post-title-wrapper:before {
+    display: block;
+    content: '║                                                                              ║\A║                                                                              ║';
+    white-space: pre;
+    overflow: hidden;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: 1;
+    color: var(--decorationFg);
+}
+
+.post-title-wrapper {
+    position: relative;
+}
+
+.post__title {
+    width: 76ch;
+    margin-left: 2ch;
+    position: relative;
+    z-index: 2;
+}
+
+.post-wrapper:before {
+    display: block;
+    content: '║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║';
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+    white-space: pre;
+    position: absolute;
+    z-index: 1;
+    color: var(--decorationFg);
+}
+
+.post-wrapper {
+    position: relative;
+}
+
+.post {
+    width: 72ch;
+    word-break: break-word;
+    white-space: pre-wrap;
+    margin-left: 4ch;
+    position: relative;
+    z-index: 2;
+}
+
+.post-form__title {
+    margin-left: 3ch;
+    position: relative;
+    z-index: 2;
+}
+
+.post-form-text-wrapper:before {
+    display: block;
+    content: '║ ┌──────────────────────────────────────────────────────────────────────────┐ ║';
+    white-space: pre;
+    z-index: 1;
+    color: var(--decorationFg);
+}
+
+.post-form-text-wrapper:after {
+    display: block;
+    content: '║ └──────────────────────────────────────────────────────────────────────────┘ ║';
+    white-space: pre;
+    z-index: 1;
+    color: var(--decorationFg);
+}
+
+.post-form-title-inner-wrapper:before {
+    display: block;
+    content: '║ │                                                                          │ ║';
+    white-space: pre;
+    position: absolute;
+    z-index: 1;
+    color: var(--decorationFg);
+}
+
+.post-form-text-inner-wrapper:before {
+    display: block;
+    content: '║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║\A║ │                                                                          │ ║';
+    white-space: pre;
+    position: absolute;
+    z-index: 1;
+    color: var(--decorationFg);
+}
+
+.thread-title__text {
+    display: block;
+    margin-left: 3ch;
+    width: 74ch;
+    background: transparent;
+    color: var(--fg);
+    position: relative;
+    z-index: 2;
+    padding: 0 1ch;
+    height: var(--fontSize);
+}
+
+.post-form__text {
+    display: block;
+    margin-left: 3ch;
+    width: 74ch;
+    background: transparent;
+    color: var(--fg);
+    position: relative;
+    z-index: 2;
+    resize: none;
+    padding: 0 1ch;
+    height: calc(8 * var(--fontSize));
+}
+
+.post-form__reply {
+    padding: 0 1ch;
+    margin-left: 3ch;
+    position: relative;
+    z-index: 2;
+}
+
+.post-form-text-wrapper:after {
+    display: block;
+    content: '║ └──────────────────────────────────────────────────────────────────────────┘ ║\A';
+    white-space: pre;
+    z-index: 1;
+    color: var(--decorationFg);
+}
+
+.footer-wrapper:after {
+    display: block;
+    content: '║                                                                              ║\A╚══════════════════════════════════════════════════════════════════════════════╝\A\A';
+    white-space: pre;
+    color: var(--decorationFg);
+}
+
+.error-message {
+    margin-left: 2ch;
+}

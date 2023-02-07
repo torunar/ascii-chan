@@ -1,0 +1,29 @@
+<form class="post-form" action="/[board]/reply/" method="POST">
+    <div class="line-wrapper">
+        <label class="post-form__title" for="newPost">[newThreadText]:</label>
+    </div>
+    <div class="post-form-text-wrapper">
+        <div class="post-form-title-inner-wrapper">
+            <input
+                type="text"
+                name="title"
+                class="thread-title__text"
+                placeholder="[titleText]"
+            />
+        </div>
+    </div>
+    <div class="post-form-text-wrapper">
+        <div class="post-form-text-inner-wrapper">
+            <textarea
+                id="newPost"
+                name="text"
+                rows="8"
+                class="post-form__text"
+                placeholder="[postText]*"
+            ></textarea>
+        </div>
+    </div>
+    <div class="line-wrapper">
+        <button class="post-form__reply" type="submit">[createText]</button>
+    </div>
+</form>
