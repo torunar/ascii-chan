@@ -126,6 +126,7 @@ button:hover, button:active, button:focus {
     margin-left: 2ch;
     position: relative;
     z-index: 2;
+    color: var(--decorationFg);
 }
 
 .post__date:after {
