@@ -16,7 +16,7 @@
 @font-face {
     font-family: "WebPlus IBM EGA 8x14";
     src: local("WebPlus IBM EGA 8x14"), url("/static/webplus-ibm-ega-8x14.woff") format("woff");
-    font-display: swap
+    font-display: block;
 }
 
 * {
