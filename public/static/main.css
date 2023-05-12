@@ -280,3 +280,7 @@ button:hover, button:active, button:focus {
 .error-message {
     margin-left: 2ch;
 }
+
+.slogan {
+    white-space: pre;
+}

@@ -8,7 +8,7 @@ function showBoardList(): string
 {
     $boards = getBoards();
 
-    return showPage(
+    return showIndexPage(
         renderBoardList($boards)
     );
 }
@@ -57,6 +57,14 @@ function showPage(array $response): string
 {
     return strtr(
         getTemplate('page'),
+        $response
+    );
+}
+
+function showIndexPage(array $response): string
+{
+    return strtr(
+        getTemplate('index'),
         $response
     );
 }
