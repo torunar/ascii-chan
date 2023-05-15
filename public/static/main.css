@@ -10,7 +10,7 @@
     --activeFg: #0000AA;
     --selectionBg: #00AA00;
     --selectionFg: #FFFFFF;
-    --fontSize: calc(min(2vw, 18px));
+    --fontSize: 14px;
 }
 
 @font-face {
@@ -29,6 +29,7 @@
     font-weight: normal;
     box-sizing: border-box;
     outline: none;
+    image-rendering: crisp-edges;
 }
 
 body {
