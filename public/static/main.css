@@ -30,11 +30,14 @@
     box-sizing: border-box;
     outline: none;
     image-rendering: crisp-edges;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
 }
 
 body {
     background: var(--bg);
     color: var(--fg);
+    padding: var(--fontSize) 0;
 }
 
 ::selection {
@@ -57,13 +60,6 @@ a:hover, a:active, a:focus,
 button:hover, button:active, button:focus {
     background: var(--activeBg);
     color: var(--activeFg);
-}
-
-.body-wrapper:before,
-.body-wrapper:after{
-    display: block;
-    content: ' ';
-    white-space: pre;
 }
 
 .body-wrapper {
