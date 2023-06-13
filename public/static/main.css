@@ -278,6 +278,27 @@ button:hover, button:active, button:focus {
     margin-left: 2ch;
 }
 
+.slogan-wrapper {
+    position: relative;
+    overflow: hidden;
+    height: calc(13 * var(--fontSize));
+    z-index: 1;
+}
+
+
 .slogan {
+    white-space: pre;
+    position: absolute;
+    padding-left: 11ch;
+    z-index: 2;
+    animation-name: scroll;
+    animation-duration: 30s;
+}
+
+.slogan-wrapper:before {
+    position: absolute;
+    display: block;
+    content: '╔══════════════════════════════════════════════════════════════════════════════╗\A║                                                                              ║\A║                                                                              ║\A║                                                                              ║\A║                                                                              ║\A║                                                                              ║\A║                                                                              ║\A║                                                                              ║\A║                                                                              ║\A║                                                                              ║\A║                                                                              ║\A║                                                                              ║\A╚══════════════════════════════════════════════════════════════════════════════╝';
+    color: var(--decorationFg);
     white-space: pre;
 }
